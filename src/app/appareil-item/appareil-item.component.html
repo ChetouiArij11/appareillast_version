@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-body">
+    <div  style="background-color: green;width: 15px;height: 15px;" *ngIf="appareilStatus === 'allumé'"></div>
+    <div style="background-color: red;width: 15px;height: 15px;" *ngIf="appareilStatus === 'eteint'"></div>
+    <li
+    [ngClass]="{
+      'list-group-item': true,
+      'list-group-item-success':appareilStatus === 'allumé',
+      'list-group-item-danger': appareilStatus === 'eteint'
+    }">
+<h4> Appareil Name : {{appareilName}}  ----- status : {{appareilStatus}}</h4>
+<h5>Last Modification {{lassttime | date :'short'}}</h5></li>
+<button class="btn btn-warning" (click)="onSwitch()">Switch</button>
+</div></div>

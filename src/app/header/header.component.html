@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">appareil </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="appareil">Appareil</a>
+        </li>
+
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li routerLinkActive="active">
+          <a class="btn btn-success" routerLink="auth" (click)="onLogin()" *ngIf="!isAuth">Login</a>
+          <a class="btn btn-danger" routerLink="auth" (click)="onLogin()" *ngIf="isAuth">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
